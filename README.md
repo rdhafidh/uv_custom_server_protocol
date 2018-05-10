@@ -8,7 +8,7 @@
  
  [Qt5](https://www.qt.io/) (LGPL V3) (Only qtcore module)
  
- [LibUV](https://github.com/libuv/libuv)  (BSD like license?)[https://github.com/libuv/libuv/blob/v1.x/LICENSE]
+ [LibUV](https://github.com/libuv/libuv)  [BSD like license?](https://github.com/libuv/libuv/blob/v1.x/LICENSE)
  
  [Google flatbuffers](https://github.com/google/flatbuffers)  (Apache v2)
  

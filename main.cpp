@@ -134,8 +134,11 @@ class MybufferIo {
   }
 
   std::vector<std::string> spliting(std::string data, std::string token) {
+	  /*
+	  TODO provide better implementation. 
+	  */
     std::vector<std::string> output;
-    std::size_t pos = std::string::npos;  // size_t to avoid improbable overflow
+    std::size_t pos = std::string::npos;   
     do {
       pos = data.find(token);
       output.push_back(data.substr(0, pos));
@@ -394,8 +397,15 @@ int main(int argc, char *argv[]) {
   data->signal.data = (void *)data;
   uv_signal_init(loop, &data->signal);
   uv_signal_start(&data->signal, signalcb, SIGINT);
+  /*
+	  TODO provide better implementation from
+	  either user provided settings config or file
+  */
   data->maxreadbuffer = 1400000;
 
+   /*
+	  TODO provide opsional either tcp socket or pipe socket over file 
+  */
   uv_tcp_init(loop, &data->server); 
   uv_ip4_addr("0.0.0.0", 8000, &addr);
 
